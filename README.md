@@ -1,4 +1,5 @@
 # Java: Spring + Maven
+poll scm
 
 ## Cos'è: Spring
 Si tratta di un framework open source per lo sviluppo di applicazioni su piattaforma Java. A questo framework sono associati tanti altri progetti, che hanno nomi compositi come Spring Boot, Spring Data, Spring Batch, eccetera. Questi progetti sono stati ideati per fornire funzionalità aggiuntive al framework. (cfr. [Wikipedia](https://it.wikipedia.org/wiki/Spring_framework))

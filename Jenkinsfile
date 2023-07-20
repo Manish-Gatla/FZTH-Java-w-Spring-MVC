@@ -25,6 +25,11 @@ pipeline {
                sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
+        stage('Sonar Qube code') {
+            steps { 
+               sh "mvn -Dmaven.test.failure.ignore=true clean sonar:sonar"
+            }
+        }
 
         
 

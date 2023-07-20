@@ -7,21 +7,22 @@ pipeline {
     }
 
     stages {
-        stage('Checkout from Github') {
-            steps {
-                // Get some code from a GitHub repository
-                //git 'https://github.com/Manish-Gatla/FZTH-Java-w-Spring-MVC.git'
-                git credentialsId: 'git', url: 'https://github.com/Manish-Gatla/FZTH-Java-w-Spring-MVC.git'
-                echo 'Hello < This is to test the echo message .Hello Good Morning '
-                // Run Maven on a Unix agent.
-                // sh "mvn -Dmaven.test.failure.ignore=true clean package"
+        // stage('Checkout from Github') {
+        //     steps {
+        //         // Get some code from a GitHub repository
+        //         //git 'https://github.com/Manish-Gatla/FZTH-Java-w-Spring-MVC.git'
+        //         git credentialsId: 'git', url: 'https://github.com/Manish-Gatla/FZTH-Java-w-Spring-MVC.git'
+        //         echo 'Hello < This is to test the echo message .Hello Good Morning '
+        //         // Run Maven on a Unix agent.
+        //         // sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-            }
-        }
+        //         // To run Maven on a Windows agent, use
+        //         // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+        //     }
+        // }
         stage('Build Jar file') {
             steps { 
+                git credentialsId: 'git', url: 'https://github.com/Manish-Gatla/FZTH-Java-w-Spring-MVC.git'
                sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
